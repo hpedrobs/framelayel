@@ -1,0 +1,28 @@
+:root {
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+}
+
+.fra-field {
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+    color: gray;
+    display: block;
+    font-size: 1em;
+    padding: 0.3em 0.5em;
+    transition: 180ms box-shadow ease-in-out;
+
+    &:not(textarea) {
+        line-height: 1;
+        height: 2.25rem;
+    }
+
+    &:focus {
+        border-color: hsl(--input-focus-h, var(--input-focus-s), var(--input-focus-l));
+        box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) + 40%), 0.8);
+        outline: 3px solid transparent;
+    }
+}
